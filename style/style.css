@@ -1,0 +1,396 @@
+/**
+#064635
+#0d4633
+#054B44
+#195635c8
+*/
+
+/**llamado a las tipografias por css**/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato&display=swap');
+
+/* 
+mis fuentes
+font-family: 'Anton', sans-serif;
+font-family: 'Lato', sans-serif;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+nav ul li{
+    text-align: center;
+    font-family: 'Lato',sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+nav ul li:hover{
+    transform: scale(1.2);
+    transition: all 1s;
+}
+
+@media screen and (min-width: 600px){
+    nav ul li{
+        font-size: 1.8rem;
+    }
+}
+@media screen and (min-width: 1024px){
+    nav ul li{
+        font-size: 2rem;
+    }
+
+}
+
+
+/**Estilos Index**/
+
+.nosotros{
+    height: 25rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    color: #054B44;
+    font-size: 4rem;
+    background-image: url("../images/frenteLocal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0rem 0rem 5rem 5rem;
+}
+.textoPortada{
+    font-size: 6rem;
+}
+.gridsInicio{
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "texto1"
+    "foto1"
+    "texto2"
+    "foto2"
+    "texto3"
+    "foto3"
+    "videoIndex";
+}
+
+.texto1{
+grid-area: texto1;
+}
+.foto1{
+grid-area: foto1;
+}
+.texto2{
+grid-area: texto2;
+}
+.foto2{
+grid-area: foto2;
+}
+.texto3{
+grid-area: texto3;
+}
+.foto3{
+grid-area: foto3;
+}
+
+.texto1, .texto2, .texto3{
+background-color: #054b44ca;
+color: whitesmoke;
+font-family: 'Lato', sans-serif;
+font-size: 1.4rem;
+padding: 1rem 1rem 1rem 1rem;
+}
+
+.imgPortada{
+    width: 100%;
+}
+
+.videoIndex{
+    grid-area: videoIndex;
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+@media screen and (min-width: 600px){
+    .nosotros{
+        height: 40rem;
+    }
+
+    .gridsInicio{
+        margin: 2rem 2rem 2rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "foto1 texto1"
+        "texto2 foto2"
+        "foto3 texto3"
+        "videoIndex videoIndex";
+    }
+    .texto1, .texto2, .texto3{
+        font-size: 1.6rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-direction: column; 
+        justify-content: center;
+        padding: 2rem 2rem 2rem 2rem;
+        }
+    .videoIndex{
+    height: 40rem;
+    width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .nosotros{
+        height: 55rem;
+        background-position: 0rem -10rem;
+    }
+    .gridsInicio{
+        margin-left: 1.7rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "foto1 texto1 foto2"
+        "texto2 foto3 texto3 "
+        "videoIndex videoIndex videoIndex";
+    }
+    .texto1, .texto2, .texto3{
+        font-size: 2.rem;
+        }
+}
+
+/**Estilos Servicios**/
+.porqueElegirnos{
+    height: 25rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    color:#054B44;
+    font-size: 5rem;
+    background-image: url("../images/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10%;
+    border-radius: 0rem 0rem 5rem 5rem;
+    margin-bottom: 2px;
+}
+
+.card{
+    height: 35rem;
+    width: 25rem;
+    background-color: #195635c8;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 10px;
+    padding: 1rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:5px solid rgba(0, 0, 0, 0.525);
+    border-radius: 2rem;
+    font-family: 'Lato',sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.carWaid{
+    background-color: rgba(88, 151, 104, 0.873);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 10px;
+    padding: 1rem 1rem 1rem 1rem;
+    border:3px solid black;
+    font-family: 'Lato',sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: whitesmoke;
+}
+.textoS{
+    background-color: rgba(88, 151, 104, 0.873);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 10px;
+    padding: 1rem 1rem 1rem 1rem;
+    border:3px solid black;
+    border-radius: 2rem;
+    font-family: 'Lato',sans-serif;
+    font-size: 1.8rem;
+}
+.imagenS{
+    width: 100%;
+}
+.imgMedios{
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+}
+
+/**Estilos Productos**/
+.tituloProductos{
+    height: 25rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    color:#054B44;
+    font-size: 200%;
+    background-image: url("../images/productos.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10%;
+    border-radius: 0rem 0rem 5rem 5rem;
+}
+.fotoP{
+    width: 100%;
+
+}
+
+.carruMarcas{
+    width: 90rem;
+}
+
+/**Estilos Contactos**/
+.contacto{
+    height: 28rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    color:#054B44;
+    font-size: 200%;
+    background-image: url("../images/fondocorralon.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10%;
+    border-radius: 0rem 0rem 5rem 5rem;
+}
+
+.telMail{
+    color: white;
+    background-color: #0b4f48a2;
+    width: auto;
+    height: 13rem;
+    font-family: 'Lato',sans-serif;
+    margin: 2rem 2rem 2rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
+    font-size: 1.5rem;
+    border: 1px solid black;
+}
+.formulario{
+    font-family: 'Lato',sans-serif;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    background-color:rgb(206, 214, 214);
+    width: 40rem;
+    height: 50rem;
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 1rem 1rem 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/**Estilos Ubicación**/
+.tituloU{
+    height: 25rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    color:#054B44;
+    background-image: url("../images/ubicacionFondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10%;
+    border-radius: 0rem 0rem 5rem 5rem;
+}
+
+
+/**style whatsapp**/
+.whatsaap{
+    float: right;
+    position: sticky;
+    bottom: 0;
+    margin-top: -15vh;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+.whatsaap:hover{
+    transform: rotate(360deg);
+    transition: all 3s;
+}
+
+/**Style footer**/
+footer{
+    width: 100%;
+    color: aliceblue;
+    margin: 0px auto;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 10%, rgba(5,28,20,1) 56%, rgba(13,70,51,1) 96%, rgba(13,70,51,1) 100%);
+    font-family: 'Lato',sans-serif; 
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.subir{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.subir:hover{
+    transform: scale(1.2);
+}
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.redesI:hover{
+    transform: scale(1.2);
+}
+.reseña{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    background-color: white;
+    width: 12rem;
+    height: 8rem;
+    border-radius: 10px;
+    padding: 2px 2px 2px 2px;
+}
+.reseña:hover{
+    transform: scale(1.1);
+}
